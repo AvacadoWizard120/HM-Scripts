@@ -2,6 +2,9 @@ This is just a utility for quirrel scripters to create more robust commands for 
 I'll add more documentation soon enough. For now, I've got some snippets from my Bomb Vest module, which can be found [here](https://discord.com/channels/1321476389815324733/1457687169283133523)
 
 
+If anybody wants to contribute to this doc, please contribute!
+
+
 You can initialize it as a soft dependency or a required dependency. Here is an example of how to initialize custom commands helper as a soft dependency:
 
 ```bash
