@@ -30,12 +30,13 @@ Here's an example of how you can register a command that takes an optional boole
 ```lua
 function registerCommands() {
 	if (CCH != null) {
+	    -- you must register the namespace for your module using the registerNamespace function, it takes 2 string arguments; the namespace itself, and a description of your module.
 		CCH.registerNamespace(nameSpace, "[Bomb Vest v" + GetModuleVersionString("Bomb Vest") + "] -> Press Interact to Explode! Made by ConfusingFool93 :)")
 
 		CCH.registerCommand(
-			nameSpace, -- The namespace of your module
-			"requireUniform", -- the command you want to register
-			"Require the bomber uniform to be equipped by the player | [optional: true/false]", -- a brief description of the command
+			nameSpace, -- The namespace of your module (string)
+			"requireUniform", -- the command you want to register (string)
+			"Require the bomber uniform to be equipped by the player | [optional: true/false]", -- a brief description of the command (string)
 			[
 				["bool", "action", false] -- a table of arguments the command takes, each argument is registered as an array [type (string), "action", required (bool)]
 			],
