@@ -33,13 +33,13 @@ function registerCommands() {
 		CCH.registerNamespace(nameSpace, "[Bomb Vest v" + GetModuleVersionString("Bomb Vest") + "] -> Press Interact to Explode! Made by ConfusingFool93 :)")
 
 		CCH.registerCommand(
-			nameSpace,
-			"requireUniform",
-			"Require the bomber uniform to be equipped by the player | [optional: true/false]",
+			nameSpace, -- The namespace of your module
+			"requireUniform", -- the command you want to register
+			"Require the bomber uniform to be equipped by the player | [optional: true/false]", -- a brief description of the command
 			[
-				["bool", "action", false]  // Changed from "string" to "bool"
+				["bool", "action", false] -- a table of arguments the command takes, each argument is registered as an array [type (string), "action", required (bool)]
 			],
-			function(parsed) {
+			function(parsed) { -- a function to run when the command is entered
 				if ("action" in parsed) {
 					requireUniform = parsed.action
 					if (requireUniform) {
