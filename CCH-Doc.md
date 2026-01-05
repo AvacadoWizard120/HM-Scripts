@@ -56,3 +56,6 @@ function registerCommands() {
 	}
 }
 ```
+
+- Each command will be registered to the Heated Metal console as namespace.command
+  If I register my module's namespace as "bv" (Bomb Vest module), and I have a command called "requireUniform", then I would have to input it into the console like "bv.requireUniform" and then follow that up with any arguments your command takes. "bv.requireUniform true"
