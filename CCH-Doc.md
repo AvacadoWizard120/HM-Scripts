@@ -41,7 +41,7 @@ function registerCommands() {
 			"requireUniform", -- the command you want to register (string)
 			"Require the bomber uniform to be equipped by the player | [optional: true/false]", -- a brief description of the command (string)
 			[
-				["bool", "action", false] -- a table of arguments the command takes, each argument is registered as an array [type (string), "action", required (bool)]
+				["bool", "action", false] -- a table of arguments the command takes, each argument is registered as an array [type (string), "variableName", required (bool)]
 			],
 			function(parsed) { -- a function to run when the command is entered
 				if ("action" in parsed) {
